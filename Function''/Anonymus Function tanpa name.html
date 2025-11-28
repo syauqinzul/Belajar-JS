@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anonymus Function tanpa Name</title>
+  </head>
+  <body>
+    <script>
+      //function tanpa nama
+      const say = function (name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      };
+
+      say("Syauqi");
+      say("Yusuf");
+
+      function giveMeName(callback) {
+        callback("Syauqi"); // sayHello("Syauqi")
+      }
+
+      giveMeName(say); // giveMeName(sayHello)
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      //menambahkan data sebanyak banyak nya
+      //tapi dalam 1 function harus 1 rest parameter saja
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p>Total ${name} is ${total}</p>`);
+      }
+      sum("Orance", 10, 20, 30, 40, 50, 60);
+      sum("Mango", 10, 20, 30, 40, 50, 60);
+      sum("Apple", 10, 20, 30, 40, 50, 60);
+
+      //spread syintax dalam array
+      const value = [10, 10, 10, 10, 10];
+      sum("Test", ...value);
+    </script>
+  </body>
+</html>

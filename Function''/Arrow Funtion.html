@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      //const sayHello = (name) => { //dikatakan Arrow Function karena menggunakan =>
+      // const say = `Hello ${name}`;
+      // console.info(say)
+      //}
+
+      const sayHello = (name) => console.info(`Hello ${name}`);
+
+      sayHello("Syauqi");
+
+      //menggunakan arrow function yang ada return nya
+      const sum = (first, second) => {
+        return first + second;
+      };
+
+      console.info(sum(100, 100));
+    </script>
+  </body>
+</html>

@@ -12,6 +12,7 @@
       // console.info(say)
       //}
 
+      // parameeter
       const sayHello = (name) => console.info(`Hello ${name}`);
 
       sayHello("Syauqi");
@@ -22,6 +23,13 @@
       };
 
       console.info(sum(100, 100));
+
+      function giveMeMoney(callback) {
+        callback("Here is your money");
+      }
+
+      // Arrow Function tanpa kurung kurawal
+      giveMeMoney((name) => console.info(`Hello${name}`));
     </script>
   </body>
 </html>

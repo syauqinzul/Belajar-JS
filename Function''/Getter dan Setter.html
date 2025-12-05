@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getter & Setter dalam function</title>
+</head>
+<body>
+  <script>
+    
+    //getter & setter pada object
+    const person = {
+      firstName: "Syauqi",
+      lastName: "Nuzul Abdi",
+      get fullName() {  //getter(mengambil data) pada object
+        return `${this.firstName} ${this.lastName}`;
+      },
+      set fullName(value) {  //setter(mengubah data) pada object
+        const parts = value.split(" ");
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+      }
+    };
+
+    person.fullName = "Syauqi Nuzul Abdi"; //memanggil setter untuk mengubah data
+    console.table(person); //menampilkan object setelah data diubah
+
+    person.fullName = "Muhammad Naufal"; //memanggil setter untuk mengubah data
+    console.table(person); //menampilkan object setelah data diubah
+
+    person.fullName = "Muhammad Ruhus"; //memanggil setter untuk mengubah data
+    console.table(person); //menampilkan object setelah data diubah
+
+    console.info(person.fullName); //memanggil getter untuk mengambil data
+
+  
+  </script>
+</body>
+</html>

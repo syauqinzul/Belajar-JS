@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+   console.info(this);
+
+    function tampilkanThis() {
+      console.info(this);
+
+      function tampilkanThisDalamFunction() {
+        console.info(this);
+      }
+
+      tampilkanThisDalamFunction();
+    }
+
+    tampilkanThis();
+
+
+    // this pada method object 
+    const person = {
+      name: "Syauqi",
+      umur: 20,
+      tampilkanThis: function(value) {
+        console.info(`Hello ${value} My name is ${this.name}`);
+      }
+    };
+
+    person.tampilkanThis("Broo");
+
+
+  </script>
+</body>
+</html>

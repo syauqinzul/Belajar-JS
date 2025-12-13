@@ -36,6 +36,22 @@ sBiru.addEventListener('input', function() {
     document.body.style.backgroundColor = 'rgb(100,100,' + b + ')';
 });
 
+//posisi mouse
+
+//ukuran browser
+// document.body.addEventListener('mousemove', function(event) {
+//     //mendapatkan ukuran browser
+//     const lebarBrowser = window.innerWidth;
+//     const tinggiBrowser = window.innerHeight;
+
+//     //mendapatkan posisi mouse
+//     const posisiX = Math.round((event.clientX / lebarBrowser) * 255);
+//     const posisiY = Math.round((event.clientY / tinggiBrowser) * 255);
+//     document.body.style.backgroundColor = 'rgb(' + posisiX + ',' + posisiY + ',100)';
+// });
+
+
+
 // cara pertama menggunakan event 'input'
 
 // const sMerah = document.getElementById('sMerah');

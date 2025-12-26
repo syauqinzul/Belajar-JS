@@ -106,13 +106,15 @@ function sayHello() {
 //   return `Halo nama saya ${nama}, umur saya ${umur} tahun.`;
 // }
 
-var nama; 'Syauqi Nuzul Abdi'
-var umur; '19'
+var nama;
+("Syauqi Nuzul Abdi");
+var username;
+("@syauqinzul_");
 
 function cetakURL(username) {
   var instagramURL = "http://instagram.com/";
   return instagramURL + username;
-} 
+}
 
 console.log(cetakURL("syauqi_nuzul"));
 
@@ -123,10 +125,10 @@ console.log(cetakURL("syauqi_nuzul"));
 
 // lexical scope
 function init() {
-  var nama = "Syauqi"; // local variable di dalam function init 
+  var nama = "Syauqi"; // local variable di dalam function init
   function tampilNama() {
     console.log(nama); // akses variable nama dari parent function
-  } 
+  }
 
   tampilNama();
 }
@@ -143,5 +145,21 @@ init();
 //   tampilNama();
 // }
 
+// function dalam function
+function a() {
+  console.log("ini a");
 
+  function b() {
+    console.log("ini b");
 
+    function c() {
+      console.log("ini c");
+    }
+
+    c();
+  }
+
+  b();
+}
+
+a();

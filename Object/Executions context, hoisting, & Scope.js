@@ -88,7 +88,6 @@ functionScopeExample();
 // let syauqi = new mahasiswa("Syauqi", 10);
 // let palji = new mahasiswa("Palji", 20);
 
-
 //execution phase
 
 console.log(sayHello());
@@ -106,3 +105,43 @@ function sayHello() {
 // function sayHello() {
 //   return `Halo nama saya ${nama}, umur saya ${umur} tahun.`;
 // }
+
+var nama; 'Syauqi Nuzul Abdi'
+var umur; '19'
+
+function cetakURL(username) {
+  var instagramURL = "http://instagram.com/";
+  return instagramURL + username;
+} 
+
+console.log(cetakURL("syauqi_nuzul"));
+
+// function cetakURL(username) {
+//   var instagramURL; 'http://instagram.com/'
+//   return instagramURL + username;
+// }
+
+// lexical scope
+function init() {
+  var nama = "Syauqi"; // local variable di dalam function init 
+  function tampilNama() {
+    console.log(nama); // akses variable nama dari parent function
+  } 
+
+  tampilNama();
+}
+
+init();
+
+// function init() {
+
+//   var nama; 'Syauqi' // local variable di dalam function init
+//   function tampilNama() {
+//     console.log(nama); // akses variable nama dari parent function
+//   }
+
+//   tampilNama();
+// }
+
+
+

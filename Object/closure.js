@@ -1,10 +1,25 @@
-//closure
-function init() {
-  let nama = 'Syauqi';
-  function tampilNama() {
-    let nama = 'suahns'
-    console.log(nama);
+// //closure
+// function init() {
+//   // let nama = 'Syauqi';
+//   function tampilNama() {
+//     console.log(nama);
+//   }
+//   tampilNama();
+// }
+// let panggilNama = init();
+// panggilNama('Nopal');
+// panggilNama('Rahul');
+
+
+
+function ucapkansalam(waktu) {
+  return function(nama) {
+    console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`);
   }
-  tampilNama();
 }
-init();
+
+let selamatPagi = ucapkanSalam('pagi')
+let selamatSiang = ucapkanSalam('siang')
+let selamatMalam = ucapkanSalam('malam')
+
+console.dir(selamatMalam('Syauqi'));g

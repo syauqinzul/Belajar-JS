@@ -1,13 +1,15 @@
 // Bisa menyimpan berbagai tipe data dalam satu array
 let mixed = [
-    42,                    // number
-    "hello",              // string
-    true,                 // boolean
-    {name: "John"},       // object
-    [1, 2, 3],            // array
-    function() { return "hi"; }, // function
-    null,                 // null
-    undefined             // undefined
+  42, // number
+  "hello", // string
+  true, // boolean
+  { name: "John" }, // object
+  [1, 2, 3], // array
+  function () {
+    return "hi";
+  }, // function
+  null, // null
+  undefined, // undefined
 ];
 
 // Ini berbeda dengan array di bahasa typed seperti Java:
@@ -20,13 +22,13 @@ let size = 1000000;
 // ❌ Buruk: Push berulang
 let badArray = [];
 for (let i = 0; i < size; i++) {
-    badArray.push(i); // Reallocation berkali-kali
+  badArray.push(i); // Reallocation berkali-kali
 }
 
 // ✅ Baik: Pre-allocate
 let goodArray = new Array(size);
 for (let i = 0; i < size; i++) {
-    goodArray[i] = i; // No reallocation
+  goodArray[i] = i; // No reallocation
 }
 
 // 2. Hindari sparse arrays
@@ -49,14 +51,14 @@ let typed = new Float64Array([1, 2, 3, 4, 5]);
 let bigArray = new Array(1000000).fill().map((_, i) => i);
 
 // Benchmark:
-console.time('forEach');
+console.time("forEach");
 let sum1 = 0;
-bigArray.forEach(n => sum1 += n);
-console.timeEnd('forEach');
+bigArray.forEach((n) => (sum1 += n));
+console.timeEnd("forEach");
 
-console.time('forLoop');
+console.time("forLoop");
 let sum2 = 0;
 for (let i = 0; i < bigArray.length; i++) {
-    sum2 += bigArray[i];
+  sum2 += bigArray[i];
 }
-console.timeEnd('forLoop'); // Biasanya lebih cepat
+console.timeEnd("forLoop"); // Biasanya lebih cepat
